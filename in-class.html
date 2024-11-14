@@ -28,6 +28,7 @@
 
 <style>
     .parent-container{
+        position: relative;
         width: 60vw;
         height: 200vh;
         background-color: grey;
@@ -66,7 +67,8 @@
     .div-2{
 
         background-color: greenyellow;
-        position: fixed;
+        position: relative;
+        left: 20px;
     }
 
         .div-2:hover{
@@ -80,7 +82,8 @@
     .div-3{
 
         background-color: bisque;
-        position: fixed;
+        position: sticky;
+        left: calc( 60vw-250px );
     }
 
         .div-3:hover{
@@ -93,6 +96,8 @@
 
         background-color: aquamarine;
         position: absolute;
+        left: 400px;
+        bottom: 40px;
     }
 
         .div-4:hover{
@@ -104,11 +109,14 @@
     .div-5{
 
         background-color: brown;
-        position: sticky;
+        position: fixed;
+        right: 50px;
+         bottom: 50px;
     }
 
         .div-5:hover{
             opacity: .3;
+            
            
         }
     
