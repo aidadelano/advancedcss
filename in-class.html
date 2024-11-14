@@ -2,123 +2,103 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Hello, world!</title>
+  <title>Advanced HTML concepts</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 </head>
 <body>
-    <div class="parent-container">
-     <div class="div-1"> <span> This div is static </span> </div>
-        
-
-     <div class="div-2">   <span> This div is relative </span> </div>
-      
-
-     <div class="div-3"> <span> This div is sticky </span> </div>
-    
-
-     <div class="div-4"> <span> This div is absolute </span> </div>
-        
-
-     <div class="div-5">  <span> This div is fixed </span> </div>
-       
+  <div class="parent-container">
+    <div class="div-1">
+      <span>This div is statically positioned</span>
     </div>
+    
+    <div class="div-2">
+      <span>This div is relatively positioned</span>
+    </div>
+    
+    <div class="div-3">
+      <span>This div is absolutely positioned</span>
+    </div>
+    
+    <div class="div-4">
+      <span>This div is fixed position</span>
+    </div>
+    
+    <div class="div-5">
+      <span>This div is sticky positioned</span>
+    </div>
+
+  </div>
 </body>
 
-
-
 <style>
+  
+.parent-container{
+  position: relative;
+  width: 60vw;
+  height: 200vh;
+  background-color: lightgrey;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.div-1, .div-2, .div-3, .div-4, .div-5  {
+  width: 200px;
+  height: 200px;
+  color: white;
+  font-family: 'Arial';
+}
+
+.div-1 {
+  background-color: lightblue;
+  display: block;
+}
+.div-2 {
+  background-color: purple;
+  position: relative;
+  left: 20px;
+}
+.div-3{
+    background-color: red;
+    position: absolute;
+    left: 400px;
+    bottom: 40px;
+  }
+.div-4{
+  background-color: orange;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+}
+.div-5{
+    background-color: green;
+    position: sticky;
+    margin-left: auto;
+    top: 50px;
+    margin-right: 50px;
+  }
+
+  @media (max-width: 450px){
+
     .parent-container{
-        position: relative;
-        width: 60vw;
-        height: 200vh;
-        background-color: grey;
-   
-    
-
-
-
+      width: 90vw;
     }
 
+    .div-1, .div-2, .div-3, .div-4, .div-5 {
 
-    .div-1, .div-2, .div-3, .div-4, .div-5{
-
-        width: 200px;
-        height: 200px;
-        display: grid
+        height: 80px;
+        width: 80px;
+        font-size: x-small;
         
-    }
-
-    .div-1{
-
-        background-color: blue;
-        position: static;
-       
-    }
-
-        .div-1:hover{
-
-            opacity: .2;
-           
-           
-            
-        }
-    
-
-    .div-2{
-
-        background-color: greenyellow;
-        position: relative;
-        left: 20px;
-    }
-
-        .div-2:hover{
-
-            opacity: .1;
-          
         
-        }
-
-
-    .div-3{
-
-        background-color: bisque;
-        position: sticky;
-        left: calc( 60vw-250px );
-    }
-
-        .div-3:hover{
-
-            opacity: .02;
-            
-        }
-
-    .div-4{
-
-        background-color: aquamarine;
-        position: absolute;
-        left: 400px;
-        bottom: 40px;
-    }
-
-        .div-4:hover{
-
-            opacity: .01;
-            
-        }
-
-    .div-5{
-
-        background-color: brown;
-        position: fixed;
-        right: 50px;
-         bottom: 50px;
-    }
-
-        .div-5:hover{
-            opacity: .3;
-            
-           
-        }
+     }
     
+     .div-1{
+
+        display:none
+     }
+  }
+  
 </style>
+
+  
 </html>
